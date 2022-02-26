@@ -5,10 +5,10 @@ class Options extends Component {
   constructor() {
     super();
     this.state = {
-      rarity: "",
-      element: "",
-      weapon: "",
-      nation: "",
+      rarity: "low",
+      element: "geo",
+      weapon: "polearm",
+      nation: "Inazuma",
     };
     this.onChangeRarity = this.onChangeRarity.bind(this);
     this.onChangeElement = this.onChangeElement.bind(this);
@@ -47,12 +47,12 @@ class Options extends Component {
     return (
       <div>
         <div onChange={this.onChangeRarity}>
-          <input type="radio" value="low" name="rarity" /> 4-star
+          <input type="radio" value="low" name="rarity" defaultChecked="checked"/> 4-star
           <input type="radio" value="high" name="rarity" /> 5-star
         </div>
         <br/>
         <div onChange={this.onChangeElement}>
-          <input type="radio" value="geo" name="element" /> Geo
+          <input type="radio" value="geo" name="element" defaultChecked="checked"/> Geo
           <input type="radio" value="cryo" name="element" /> Cryo
           <input type="radio" value="pyro" name="element" /> Pyro
           <input type="radio" value="hydro" name="element" /> Hydro
@@ -61,7 +61,7 @@ class Options extends Component {
         </div>
         <br/>
         <div onChange={this.onChangeWeapon}>
-          <input type="radio" value="polearm" name="weapon" /> Polearm
+          <input type="radio" value="polearm" name="weapon" defaultChecked="checked"/> Polearm
           <input type="radio" value="sword" name="weapon" /> Sword
           <input type="radio" value="bow" name="weapon" /> Bow
           <input type="radio" value="catalyst" name="weapon" /> Catalyst
@@ -69,12 +69,13 @@ class Options extends Component {
         </div>
         <br/>
         <div onChange={this.onChangeNation}>
-          <input type="radio" value="Inazuma" name="nation" /> Inazuma
+          <input type="radio" value="Inazuma" name="nation" defaultChecked="checked"/> Inazuma
           <input type="radio" value="Liyue" name="nation" /> Liyue
           <input type="radio" value="Mondstadt" name="nation" /> Mondstadt
           <input type="radio" value="Snezhnaya" name="nation" /> Snezhnaya
           <input type="radio" value="Nowhere" name="nation" /> Nowhere
         </div>
+        <br/>
         <br/>
         <button onClick={this.onPress}>Generate yourself</button> 
       </div>
