@@ -102,11 +102,15 @@ function App() {
           <h1>Appreciate your beauty</h1>
           <img src="char_silhouette.png" alt="Who is it?"></img>
           <br/>
+          <br/>
+          <br/>
           <button type="button">Download 3D avatar</button> 
         </div>
         <div class="right">
           <h1>Register your identity</h1>
           <img src="nftemplate.png" alt="Bored Dliuc"></img>
+          <br/>
+          <br/>
           <br/>
           <button type="button">Purchase NFT</button> 
         </div>
